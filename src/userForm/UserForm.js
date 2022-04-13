@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import personal from '../img/personal.jpg'
 
 const UserForm = ({formData, setFormData}) => {
@@ -76,7 +75,7 @@ const UserForm = ({formData, setFormData}) => {
                                         value={formData.gender}
                                         onChange={(e) => setFormData({...formData, gender:e.target.value})}
                                         >
-                                            <option hidden> --Select Gender-- </option>
+                                            <option value="" hidden> --Select Gender-- </option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                             <option value="Other">Other</option>
@@ -111,20 +110,69 @@ const UserForm = ({formData, setFormData}) => {
                                         Submit
                                     </button>
                                 </div>
-                            {
-                                isPending && <div>
-                                    Form submission successful, click
-                                    <Link to='/details' className='text-red-500 px-1 text-lg'>
-                                        here
-                                    </Link>
-                                     to view details
-                                </div>
-                            }
                             </form>
                         </div>
                     </div>
                 </div>
-		</div>
+                {
+                    isPending &&
+                    <div className="container-fluid mx-auto">
+            <h3 className="text-center text-2xl mt-5">
+                Your Details
+            </h3>
+            <div className="container mx-auto text-center">
+                <p className="pt-5">
+                    <span>
+                    First name :
+                    </span>
+                    <span className="pl-3">
+                        { formData.firstName }
+                    </span>
+                </p>
+                <p className="pt-5">
+                    <span>
+                    Last name :
+                    </span>
+                    <span className="pl-3">
+                        { formData.lastName }
+                    </span>
+                </p>
+                <p className="pt-5">
+                    <span>
+                    Email :
+                    </span>
+                    <span className="pl-3">
+                        { formData.email }
+                    </span>
+                </p>
+                <p className="pt-5">
+                    <span>
+                    Gender :
+                    </span>
+                    <span className="pl-3">
+                        { formData.gender }
+                    </span>
+                </p>
+                <p className="pt-5">
+                    <span>
+                    Address :
+                    </span>
+                    <span className="pl-3">
+                        { formData.address }
+                    </span>
+                </p>
+                <p className="pt-5">
+                    <span>
+                    Bio :
+                    </span>
+                    <span className="pl-3">
+                        { formData.bio }
+                    </span>
+                </p>
+            </div>
+        </div>
+                }
+		    </div>
         </div>
     );
 }

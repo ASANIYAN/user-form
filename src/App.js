@@ -1,8 +1,5 @@
 import { useState } from 'react';
-import './App.css';
 import UserForm from './userForm/UserForm';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Details from './userForm/Details';
 
 function App() {
 
@@ -16,20 +13,11 @@ function App() {
 });
 
   return (
-      <Router>
-        <div className="App">
+    <div className="App">
           <div className="container mx-auto">
-            <Switch>
-              <Route path="/">
-                <UserForm formData={formData} setFormData={setFormData} />
-              </Route>
-              <Route path='/details'>
-                <Details formData={formData} setFormData={setFormData} />
-              </Route>
-            </Switch>
+            <UserForm formData={formData} setFormData={setFormData} />
           </div>
         </div>
-      </Router>
   );
 }
 
