@@ -23,7 +23,7 @@ function App() {
               <Route exact path="/user-form/UserForm">
                 <UserForm formData={formData} setFormData={setFormData} />
               </Route>
-              <Route path='/user-form/details'>
+              <Route path='/user-form/details' exact>
                 <Details formData={formData} setFormData={setFormData}/>
               </Route>
             </Switch>

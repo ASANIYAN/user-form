@@ -114,7 +114,7 @@ const UserForm = ({formData, setFormData}) => {
                             {
                                 isPending && <div>
                                     Form submission successful, click
-                                    <Link to='/details' className='text-red-500 px-1 text-lg'>
+                                    <Link to='/user-form/details' className='text-red-500 px-1 text-lg'>
                                         here
                                     </Link>
                                      to view details
