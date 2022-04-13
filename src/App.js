@@ -20,7 +20,7 @@ function App() {
         <div className="App">
           <div className="container mx-auto">
             <Switch>
-              <Route exact path="/">
+              <Route path="/">
                 <UserForm formData={formData} setFormData={setFormData} />
               </Route>
               <Route path='/details'>
