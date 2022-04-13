@@ -24,7 +24,7 @@ function App() {
                 <UserForm formData={formData} setFormData={setFormData} />
               </Route>
               <Route path='/details'>
-                <Details formData={formData} setFormData={setFormData}/>
+                <Details formData={formData} setFormData={setFormData} />
               </Route>
             </Switch>
           </div>
