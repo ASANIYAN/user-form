@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/user-form/static/css/main.231a3161.css",
+    "main.js": "/user-form/static/js/main.d0feaa5b.js",
+    "static/media/personal.jpg": "/user-form/static/media/personal.7a9618aa60e649439340.jpg",
+    "index.html": "/user-form/index.html",
+    "main.231a3161.css.map": "/user-form/static/css/main.231a3161.css.map",
+    "main.d0feaa5b.js.map": "/user-form/static/js/main.d0feaa5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.231a3161.css",
+    "static/js/main.d0feaa5b.js"
+  ]
+}
